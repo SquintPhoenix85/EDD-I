@@ -8,4 +8,3 @@ namespace RestaurantApp;
 public partial class App : Application
 {
 }
-
