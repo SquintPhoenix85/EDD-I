@@ -1,0 +1,38 @@
+<UserControl x:Class="RestaurantApp.Views.PlatosView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Lista de platos -->
+        <GroupBox Header="Lista de Platos" Grid.Column="0" Margin="0,0,5,0">
+            <DataGrid ItemsSource="{Binding Platos}" SelectedItem="{Binding SelectedPlato}"
+                      AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+                    <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="*"/>
+                    <DataGridTextColumn Header="Precio" Binding="{Binding Precio, StringFormat=C}" Width="100"/>
+                    <DataGridTextColumn Header="Disponible" Binding="{Binding Disponible}" Width="80"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </GroupBox>
+
+        <!-- Formulario -->
+        <GroupBox Header="Gestión de Plato" Grid.Column="1">
+            <StackPanel Margin="10" VerticalAlignment="Top">
+                <Label Content="Nombre:"/>
+                <TextBox Text="{Binding Nombre, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,8"/>
+                <Label Content="Precio:"/>
+                <TextBox Text="{Binding Precio, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,8"/>
+                <Button Content="Guardar" Command="{Binding GuardarCommand}" Margin="0,0,0,5" Padding="5"/>
+                <Button Content="Eliminar" Command="{Binding EliminarCommand}" Margin="0,0,0,5" Padding="5"/>
+                <Button Content="Toggle Disponibilidad" Command="{Binding ToggleDisponibilidadCommand}" Margin="0,0,0,5" Padding="5"/>
+                <Button Content="Nuevo" Command="{Binding NuevoCommand}" Margin="0,0,0,10" Padding="5"/>
+                <TextBlock Text="{Binding Mensaje}" Foreground="DarkGreen" TextWrapping="Wrap"/>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</UserControl>

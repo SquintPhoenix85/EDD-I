@@ -1,0 +1,9 @@
+using System.Windows.Controls;
+
+namespace RestaurantApp.Views
+{
+    public partial class PlatosView : UserControl
+    {
+        public PlatosView() => InitializeComponent();
+    }
+}
