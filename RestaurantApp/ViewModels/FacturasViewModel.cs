@@ -20,5 +20,7 @@ namespace RestaurantApp.ViewModels
             Facturas.Clear();
             foreach (var f in _service.ObtenerTodas()) Facturas.Add(f);
         }
+
+        public void RefreshData() => Cargar();
     }
 }

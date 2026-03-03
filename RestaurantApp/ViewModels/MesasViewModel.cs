@@ -56,6 +56,11 @@ namespace RestaurantApp.ViewModels
             foreach (var m in _service.ObtenerTodas()) Mesas.Add(m);
         }
 
+        public void RefreshData()
+        {
+            this.CargarMesas();
+        }
+
         private void Guardar(object? _)
         {
             try

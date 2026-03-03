@@ -58,6 +58,11 @@ namespace RestaurantApp.ViewModels
             foreach (var p in _service.ObtenerTodos()) Platos.Add(p);
         }
 
+        public void RefreshData()
+        {
+            this.CargarPlatos();
+        }
+
         private void Guardar(object? _)
         {
             try

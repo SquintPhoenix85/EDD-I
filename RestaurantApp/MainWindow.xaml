@@ -5,10 +5,7 @@
         xmlns:vm="clr-namespace:RestaurantApp.ViewModels"
         Title="Sistema de Gestión de Restaurante" Height="700" Width="1100"
         WindowStartupLocation="CenterScreen">
-    <Window.DataContext>
-        <vm:MainViewModel/>
-    </Window.DataContext>
-    <TabControl>
+    <TabControl SelectionChanged="TabControl_SelectionChanged">
         <TabItem Header="🍽️ Platos">
             <views:PlatosView DataContext="{Binding PlatosVM}"/>
         </TabItem>
