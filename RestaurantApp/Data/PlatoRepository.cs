@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using RestaurantApp.Models;
+using RestaurantApp.Utilities;
 
 namespace RestaurantApp.Data
 {
@@ -35,7 +36,7 @@ namespace RestaurantApp.Data
         public void Save(Plato plato)
         {
             var all = GetAll();
-            if (plato.Id == 0) plato.Id = all.Count > 0 ? all.Max(p => p.Id) + 1 : 1;
+            if (plato.Id == 0) plato.Id = ID.GenerateNextId(all);
             var existing = all.FirstOrDefault(p => p.Id == plato.Id);
             if (existing != null) all.Remove(existing);
             all.Add(plato);

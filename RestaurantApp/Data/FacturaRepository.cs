@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using RestaurantApp.Models;
+using RestaurantApp.Utilities;
 
 namespace RestaurantApp.Data
 {
@@ -33,7 +34,7 @@ namespace RestaurantApp.Data
         public void Save(Factura factura)
         {
             var all = GetAll();
-            if (factura.Id == 0) factura.Id = all.Count > 0 ? all.Max(f => f.Id) + 1 : 1;
+            if (factura.Id == 0) factura.Id = ID.GenerateNextId(all);
             var existing = all.FirstOrDefault(f => f.Id == factura.Id);
             if (existing != null) all.Remove(existing);
             all.Add(factura);

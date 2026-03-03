@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using RestaurantApp.Models;
+using RestaurantApp.Utilities;
 
 namespace RestaurantApp.Data
 {
@@ -50,7 +51,7 @@ namespace RestaurantApp.Data
         public void Save(Pedido pedido)
         {
             var all = GetAll();
-            if (pedido.Id == 0) pedido.Id = all.Count > 0 ? all.Max(p => p.Id) + 1 : 1;
+            if (pedido.Id == 0) pedido.Id = ID.GenerateNextId(all);
             var existing = all.FirstOrDefault(p => p.Id == pedido.Id);
             if (existing != null) all.Remove(existing);
             all.Add(pedido);
