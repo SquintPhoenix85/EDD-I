@@ -36,7 +36,7 @@ namespace RestaurantApp.Data
         public void Save(Mesa mesa)
         {
             var all = GetAll();
-            if (mesa.Id == 0) mesa.Id = ID.GenerateNextId(all);
+            if (mesa.Id == 0) mesa.Id = IdGenerator.GenerateNextId(all);
             var existing = all.FirstOrDefault(m => m.Id == mesa.Id);
             if (existing != null) all.Remove(existing);
             all.Add(mesa);

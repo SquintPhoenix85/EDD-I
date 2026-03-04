@@ -6,9 +6,9 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="300"/>
         </Grid.ColumnDefinitions>
-
+        
         <!-- Lista de platos -->
-        <GroupBox Header="Lista de Platos" Grid.Column="0" Margin="0,0,5,0">
+        <GroupBox Header="Lista de Platos" Grid.RowSpan="3"  Grid.Column="0" Margin="0,0,5,0">
             <DataGrid ItemsSource="{Binding Platos}" SelectedItem="{Binding SelectedPlato}"
                       AutoGenerateColumns="False" IsReadOnly="True">
                 <DataGrid.Columns>
@@ -27,11 +27,11 @@
                 <TextBox Text="{Binding Nombre, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,8"/>
                 <Label Content="Precio:"/>
                 <TextBox Text="{Binding Precio, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,8"/>
-                <Button Content="Guardar" Command="{Binding GuardarCommand}" Margin="0,0,0,5" Padding="5"/>
-                <Button Content="Eliminar" Command="{Binding EliminarCommand}" Margin="0,0,0,5" Padding="5"/>
-                <Button Content="Toggle Disponibilidad" Command="{Binding ToggleDisponibilidadCommand}" Margin="0,0,0,5" Padding="5"/>
-                <Button Content="Nuevo" Command="{Binding NuevoCommand}" Margin="0,0,0,10" Padding="5"/>
-                <TextBlock Text="{Binding Mensaje}" Foreground="DarkGreen" TextWrapping="Wrap"/>
+                <Button Content="Registrar" Command="{Binding GuardarCommand}" Margin="0,0,0,5" Padding="5" ToolTip="Use este botón para crear un nuevo plato, o modificar las propiedades de uno existente."/>
+                <Button Content="Eliminar" Command="{Binding EliminarCommand}" Margin="0,0,0,5" Padding="5" ToolTip="Seleccione una entrada en la tabla, y clickee aquí para eliminarla."/>
+                <Button Content="Cambiar Disponibilidad" Command="{Binding ToggleDisponibilidadCommand}" Margin="0,0,0,5" Padding="5" ToolTip="Registra la disponibilidad del plato en las entradas de facturación."/>
+                <Button Content="Limpiar" Command="{Binding NuevoCommand}" Margin="0,0,0,5" Padding="5" ToolTip="Use este botón para despejar los campos del formulario."/>
+                <TextBlock Text="{Binding Mensaje}" Foreground="LightBlue" TextWrapping="Wrap"/>
             </StackPanel>
         </GroupBox>
     </Grid>

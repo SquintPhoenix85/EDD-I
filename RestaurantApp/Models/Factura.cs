@@ -2,7 +2,7 @@ using System;
 
 namespace RestaurantApp.Models
 {
-    public class Factura
+    public class Factura : IEntity
     {
         public int Id { get; set; }
         public int PedidoId { get; set; }

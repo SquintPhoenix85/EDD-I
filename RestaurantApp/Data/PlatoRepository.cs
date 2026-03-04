@@ -36,7 +36,7 @@ namespace RestaurantApp.Data
         public void Save(Plato plato)
         {
             var all = GetAll();
-            if (plato.Id == 0) plato.Id = ID.GenerateNextId(all);
+            if (plato.Id == 0) plato.Id = IdGenerator.GenerateNextId(all);
             var existing = all.FirstOrDefault(p => p.Id == plato.Id);
             if (existing != null) all.Remove(existing);
             all.Add(plato);

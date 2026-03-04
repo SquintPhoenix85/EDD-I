@@ -1,6 +1,6 @@
 namespace RestaurantApp.Models
 {
-    public class Mesa
+    public class Mesa : IEntity
     {
         public int Id { get; set; }
         public int Numero { get; set; }

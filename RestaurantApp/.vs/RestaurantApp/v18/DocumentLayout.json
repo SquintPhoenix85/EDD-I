@@ -1,66 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\",
+  "WorkspaceRootPath": "C:\\Users\\Lenovo\\Documents\\DATOS\\EDD-I\\RestaurantApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\source\\repos\\presupuestosconstructora\\edd-i\\restaurantapp\\models\\mesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:models\\mesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\source\\repos\\presupuestosconstructora\\edd-i\\restaurantapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\source\\repos\\presupuestosconstructora\\edd-i\\restaurantapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\source\\repos\\presupuestosconstructora\\edd-i\\restaurantapp\\views\\mesasview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\documents\\datos\\edd-i\\restaurantapp\\views\\mesasview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:views\\mesasview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\source\\repos\\presupuestosconstructora\\edd-i\\restaurantapp\\viewmodels\\mesasviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:viewmodels\\mesasviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\documents\\datos\\edd-i\\restaurantapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\source\\repos\\presupuestosconstructora\\edd-i\\restaurantapp\\data\\mesarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:data\\mesarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\source\\repos\\presupuestosconstructora\\edd-i\\restaurantapp\\data\\pedidorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:data\\pedidorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\source\\repos\\presupuestosconstructora\\edd-i\\restaurantapp\\data\\facturarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:data\\facturarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\source\\repos\\presupuestosconstructora\\edd-i\\restaurantapp\\viewmodels\\pedidosviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:viewmodels\\pedidosviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\source\\repos\\presupuestosconstructora\\edd-i\\restaurantapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\documents\\datos\\edd-i\\restaurantapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\source\\repos\\presupuestosconstructora\\edd-i\\restaurantapp\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\source\\repos\\presupuestosconstructora\\edd-i\\restaurantapp\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\source\\repos\\presupuestosconstructora\\edd-i\\restaurantapp\\services\\facturaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:services\\facturaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\source\\repos\\presupuestosconstructora\\edd-i\\restaurantapp\\views\\facturasview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:views\\facturasview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\source\\repos\\presupuestosconstructora\\edd-i\\restaurantapp\\views\\facturasview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:views\\facturasview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\documents\\datos\\edd-i\\restaurantapp\\restaurantapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:restaurantapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,196 +26,62 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Mesa.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\Models\\Mesa.cs",
-              "RelativeDocumentMoniker": "Models\\Mesa.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\Models\\Mesa.cs",
-              "RelativeToolTip": "Models\\Mesa.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T21:39:39.302Z",
+              "DocumentIndex": 2,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\DATOS\\EDD-I\\RestaurantApp\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\DATOS\\EDD-I\\RestaurantApp\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-03T19:33:18.857Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "RestaurantApp",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\DATOS\\EDD-I\\RestaurantApp\\RestaurantApp.csproj",
+              "RelativeDocumentMoniker": "RestaurantApp.csproj",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\DATOS\\EDD-I\\RestaurantApp\\RestaurantApp.csproj",
+              "RelativeToolTip": "RestaurantApp.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-04T01:23:35.11Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "MesasView.xaml",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\Views\\MesasView.xaml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\DATOS\\EDD-I\\RestaurantApp\\Views\\MesasView.xaml",
               "RelativeDocumentMoniker": "Views\\MesasView.xaml",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\Views\\MesasView.xaml",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\DATOS\\EDD-I\\RestaurantApp\\Views\\MesasView.xaml",
               "RelativeToolTip": "Views\\MesasView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-03T21:38:38.748Z",
+              "WhenOpened": "2026-03-04T01:38:37.792Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MesasViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\ViewModels\\MesasViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\MesasViewModel.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\ViewModels\\MesasViewModel.cs",
-              "RelativeToolTip": "ViewModels\\MesasViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T21:38:29.906Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MesaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\Data\\MesaRepository.cs",
-              "RelativeDocumentMoniker": "Data\\MesaRepository.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\Data\\MesaRepository.cs",
-              "RelativeToolTip": "Data\\MesaRepository.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T21:35:01.81Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "BaseViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\ViewModels\\BaseViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\BaseViewModel.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\ViewModels\\BaseViewModel.cs",
-              "RelativeToolTip": "ViewModels\\BaseViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T20:28:32.865Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\DATOS\\EDD-I\\RestaurantApp\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\DATOS\\EDD-I\\RestaurantApp\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-03T19:35:48.597Z",
+              "WhenOpened": "2026-03-04T01:33:17.221Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAABAAAACAbGZmZmYRwB8AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T19:53:51.571Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\App.xaml",
-              "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\App.xaml",
-              "RelativeToolTip": "App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-03T19:33:18.857Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PedidosViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\ViewModels\\PedidosViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\PedidosViewModel.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\ViewModels\\PedidosViewModel.cs",
-              "RelativeToolTip": "ViewModels\\PedidosViewModel.cs",
-              "ViewState": "AgIAAH8AAAAAAAAAAAAswIgAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T20:27:00.86Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\ViewModels\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\MainViewModel.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\ViewModels\\MainViewModel.cs",
-              "RelativeToolTip": "ViewModels\\MainViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T20:30:07.511Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PedidoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\Data\\PedidoRepository.cs",
-              "RelativeDocumentMoniker": "Data\\PedidoRepository.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\Data\\PedidoRepository.cs",
-              "RelativeToolTip": "Data\\PedidoRepository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAABzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T21:34:53.269Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FacturaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\Data\\FacturaRepository.cs",
-              "RelativeDocumentMoniker": "Data\\FacturaRepository.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\Data\\FacturaRepository.cs",
-              "RelativeToolTip": "Data\\FacturaRepository.cs",
-              "ViewState": "AgIAABkAAACAODMzMzMhwBsAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T20:12:55.791Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "FacturaService.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\Services\\FacturaService.cs",
-              "RelativeDocumentMoniker": "Services\\FacturaService.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\Services\\FacturaService.cs",
-              "RelativeToolTip": "Services\\FacturaService.cs",
-              "ViewState": "AgIAAAQAAADAnJmZmZkewAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T20:12:41.173Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "FacturasView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\Views\\FacturasView.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\FacturasView.xaml.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\Views\\FacturasView.xaml.cs",
-              "RelativeToolTip": "Views\\FacturasView.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-03T20:11:41.088Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "FacturasView.xaml",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\Views\\FacturasView.xaml",
-              "RelativeDocumentMoniker": "Views\\FacturasView.xaml",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\PresupuestosConstructora\\EDD-I\\RestaurantApp\\Views\\FacturasView.xaml",
-              "RelativeToolTip": "Views\\FacturasView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-03T20:11:27.631Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

@@ -51,7 +51,7 @@ namespace RestaurantApp.Data
         public void Save(Pedido pedido)
         {
             var all = GetAll();
-            if (pedido.Id == 0) pedido.Id = ID.GenerateNextId(all);
+            if (pedido.Id == 0) pedido.Id = IdGenerator.GenerateNextId(all);
             var existing = all.FirstOrDefault(p => p.Id == pedido.Id);
             if (existing != null) all.Remove(existing);
             all.Add(pedido);

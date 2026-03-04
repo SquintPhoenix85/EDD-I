@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace RestaurantApp.Models
 {
-    public class Pedido
+    public class Pedido : IEntity
     {
         public int Id { get; set; }
         public int MesaId { get; set; }

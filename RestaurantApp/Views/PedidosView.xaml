@@ -55,12 +55,12 @@
             <WrapPanel Margin="5">
                 <Label Content="Plato:" VerticalAlignment="Center"/>
                 <ComboBox ItemsSource="{Binding Platos}" SelectedItem="{Binding SelectedPlato}"
-                          DisplayMemberPath="Nombre" Width="150" Margin="5,0"/>
+                          DisplayMemberPath="Nombre" Width="105" Margin="5,0"/>
                 <Label Content="Cantidad:" VerticalAlignment="Center"/>
-                <TextBox Text="{Binding Cantidad, UpdateSourceTrigger=PropertyChanged}" Width="50" Margin="5,0"/>
+                <TextBox Text="{Binding Cantidad, UpdateSourceTrigger=PropertyChanged}" Width="80" Margin="5,0"/>
                 <Button Content="Agregar Plato" Command="{Binding AgregarDetalleCommand}" Margin="5,0" Padding="8,3"/>
                 <Label Content="Propina %:" VerticalAlignment="Center"/>
-                <TextBox Text="{Binding Propina, UpdateSourceTrigger=PropertyChanged}" Width="50" Margin="5,0"/>
+                <TextBox Text="{Binding Propina, UpdateSourceTrigger=PropertyChanged}" Width="80" Margin="5,0"/>
                 <Button Content="Cerrar Pedido" Command="{Binding CerrarPedidoCommand}" Margin="5,0" Padding="8,3"/>
                 <Button Content="Cancelar Pedido" Command="{Binding CancelarPedidoCommand}" Margin="5,0" Padding="8,3"/>
                 <Button Content="Generar Factura" Command="{Binding GenerarFacturaCommand}" Margin="5,0" Padding="8,3"/>

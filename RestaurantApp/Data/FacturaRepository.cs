@@ -34,7 +34,7 @@ namespace RestaurantApp.Data
         public void Save(Factura factura)
         {
             var all = GetAll();
-            if (factura.Id == 0) factura.Id = ID.GenerateNextId(all);
+            if (factura.Id == 0) factura.Id = IdGenerator.GenerateNextId(all);
             var existing = all.FirstOrDefault(f => f.Id == factura.Id);
             if (existing != null) all.Remove(existing);
             all.Add(factura);
