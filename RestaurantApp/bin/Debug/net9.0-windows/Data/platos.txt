@@ -1,0 +1,5 @@
+1|expresso|10|False|
+3|capuchino|1.00|True|
+2|torta|20|True|
+4|agua|5|True|
+5|plato|1|True|

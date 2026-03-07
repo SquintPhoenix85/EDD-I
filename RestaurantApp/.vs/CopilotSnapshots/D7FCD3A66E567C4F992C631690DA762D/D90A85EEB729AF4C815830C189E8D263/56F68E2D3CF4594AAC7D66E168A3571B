@@ -1,0 +1,16 @@
+﻿using System.Windows.Controls;
+
+namespace RestaurantApp.Views
+{
+    public partial class PlatosView : UserControl
+    {
+        public PlatosView() => InitializeComponent();
+
+        // Added missing event handler referenced from XAML (TextChanged="TextBox_TextChanged")
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            // No-op: keeping empty because data binding handles updates.
+            // If you need custom logic on text change, add it here.
+        }
+    }
+}

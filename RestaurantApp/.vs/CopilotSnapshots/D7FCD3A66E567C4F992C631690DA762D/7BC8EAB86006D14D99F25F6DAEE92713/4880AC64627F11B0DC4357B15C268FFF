@@ -1,0 +1,23 @@
+﻿using System.Windows.Controls;
+using System.Windows.Input;
+using RestaurantApp.Models;
+using RestaurantApp.ViewModels;
+
+namespace RestaurantApp.Views
+{
+    public partial class MesasView : UserControl
+    {
+        public MesasView() => InitializeComponent();
+
+        private void Mesa_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            if (sender is Border border && border.DataContext is Mesa mesa)
+            {
+                if (DataContext is MesasViewModel viewModel)
+                {
+                    viewModel.SelectedMesa = mesa;
+                }
+            }
+        }
+    }
+}

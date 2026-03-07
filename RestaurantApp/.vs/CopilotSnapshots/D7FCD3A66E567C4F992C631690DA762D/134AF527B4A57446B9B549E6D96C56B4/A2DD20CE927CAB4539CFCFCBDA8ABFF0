@@ -1,0 +1,29 @@
+﻿using System.Windows.Controls;
+using System.Windows.Input;
+
+namespace RestaurantApp.Views
+{
+    public partial class PlatosView : UserControl
+    {
+        public PlatosView() => InitializeComponent();
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            // No-op: keeping empty because data binding handles updates.
+            // If you need custom logic on text change, add it here.
+        }
+
+        private void Border_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            // Cuando se hace click en una tarjeta de plato
+            if (sender is Border border && border.DataContext is Models.Plato plato)
+            {
+                // Actualizar el SelectedPlato en el ViewModel
+                if (DataContext is ViewModels.PlatosViewModel viewModel)
+                {
+                    viewModel.SelectedPlato = plato;
+                }
+            }
+        }
+    }
+}

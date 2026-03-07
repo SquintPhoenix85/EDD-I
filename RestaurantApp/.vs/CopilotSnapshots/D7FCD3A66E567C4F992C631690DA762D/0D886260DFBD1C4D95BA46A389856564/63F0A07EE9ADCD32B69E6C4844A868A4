@@ -1,0 +1,26 @@
+﻿namespace RestaurantApp.Models
+{
+    public class Plato : IEntity
+    {
+        public int Id { get; set; }
+        public string Nombre { get; set; } = string.Empty;
+        public decimal Precio { get; set; }
+        public bool Disponible { get; set; } = true;
+        public string? ImagePath { get; set; }
+
+        public override string ToString() => $"{Id}|{Nombre}|{Precio.ToString(System.Globalization.CultureInfo.InvariantCulture)}|{Disponible}|{ImagePath ?? string.Empty}";
+
+        public static Plato FromString(string line)
+        {
+            var parts = line.Split('|');
+            return new Plato
+            {
+                Id = int.Parse(parts[0]),
+                Nombre = parts[1],
+                Precio = decimal.Parse(parts[2], System.Globalization.CultureInfo.InvariantCulture),
+                Disponible = bool.Parse(parts[3]),
+                ImagePath = parts.Length > 4 && !string.IsNullOrEmpty(parts[4]) ? parts[4] : null
+            };
+        }
+    }
+}

@@ -1,0 +1,27 @@
+using System.Collections.Generic;
+
+namespace RestaurantApp.Utilities
+{
+    public static class MesaImageHelper
+    {
+        private static readonly Dictionary<int, string> MesaImageMap = new()
+        {
+            { 1, "/Resources/Images/mesa2.png" },
+            { 2, "/Resources/Images/mesa4.png" },
+            { 3, "/Resources/Images/mesa6.png" },
+        };
+
+        public static string GetImagePathByCapacidad(int capacidad)
+        {
+            if (MesaImageMap.TryGetValue(capacidad, out var imagePath))
+                return imagePath;
+
+            return GetDefaultImage();
+        }
+
+        public static string GetDefaultImage()
+        {
+            return "/Resources/Images/mesa4.png";
+        }
+    }
+}

@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="fonts\Poppins-Regular.ttf" />
+    <None Remove="fonts\Poppins-SemiBold.ttf" />
+    <None Remove="Resources\Images\agua.png" />
+    <None Remove="Resources\Images\capuchino.png" />
+    <None Remove="Resources\Images\chocolate.jpg" />
+    <None Remove="Resources\Images\expresso.png" />
+    <None Remove="Resources\Images\torta.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="fonts\Poppins-Regular.ttf" />
+    <Resource Include="fonts\Poppins-SemiBold.ttf" />
+    <Resource Include="Resources\Images\agua.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\capuchino.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\chocolate.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\expresso.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\torta.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>

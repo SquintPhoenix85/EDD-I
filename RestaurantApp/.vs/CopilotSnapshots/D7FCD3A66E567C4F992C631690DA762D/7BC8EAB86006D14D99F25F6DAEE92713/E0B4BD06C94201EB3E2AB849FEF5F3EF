@@ -1,0 +1,147 @@
+﻿<UserControl x:Class="RestaurantApp.Views.MesasView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <UserControl.Resources>
+
+        <!-- Estilo para Mesas Disponibles -->
+        <Style x:Key="MesaDisponibleStyle" TargetType="Border">
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Background" Value="#90EE90"/>
+            <Setter Property="BorderBrush" Value="#228B22"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Margin" Value="8"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="MinWidth" Value="100"/>
+            <Setter Property="MinHeight" Value="100"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="BorderThickness" Value="3"/>
+                    <Setter Property="Background" Value="#7FD87F"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Estilo para Mesas Ocupadas -->
+        <Style x:Key="MesaOcupadaStyle" TargetType="Border">
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Background" Value="#FFB6C6"/>
+            <Setter Property="BorderBrush" Value="#DC143C"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Margin" Value="8"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="MinWidth" Value="100"/>
+            <Setter Property="MinHeight" Value="100"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="BorderThickness" Value="3"/>
+                    <Setter Property="Background" Value="#FFA0B4"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Estilo para Mesa Seleccionada -->
+        <Style x:Key="MesaSeleccionadaStyle" TargetType="Border">
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Background" Value="#FFD700"/>
+            <Setter Property="BorderBrush" Value="#6F4E37"/>
+            <Setter Property="BorderThickness" Value="3"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Margin" Value="8"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="MinWidth" Value="100"/>
+            <Setter Property="MinHeight" Value="100"/>
+        </Style>
+
+    </UserControl.Resources>
+
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Plano del Restaurante -->
+        <GroupBox Header="Plano del Restaurante"
+                  Grid.Column="0"
+                  Margin="0,0,5,0"
+                  FontFamily="/Fonts/#Poppins"
+                  FontWeight="Bold">
+
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <ItemsControl ItemsSource="{Binding Mesas}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal" 
+                                       HorizontalAlignment="Left"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border MouseLeftButtonUp="Mesa_MouseLeftButtonUp">
+                                <Border.Style>
+                                    <MultiBinding Converter="{StaticResource MesaStateToStyleConverter}">
+                                        <Binding Path="Estado"/>
+                                        <Binding Path="DataContext.SelectedMesa" RelativeSource="{RelativeSource AncestorType=ItemsControl}"/>
+                                        <Binding Path="."/>
+                                    </MultiBinding>
+                                </Border.Style>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+
+                                    <!-- Número de Mesa -->
+                                    <TextBlock Text="{Binding Numero, StringFormat='Mesa {0}'}"
+                                               FontSize="18"
+                                               FontWeight="Bold"
+                                               Foreground="#2D2D2D"
+                                               TextAlignment="Center"
+                                               Margin="0,0,0,8"/>
+
+                                    <!-- Capacidad -->
+                                    <TextBlock Text="{Binding Capacidad, StringFormat='Capacidad: {0}'}"
+                                               FontSize="12"
+                                               Foreground="#2D2D2D"
+                                               TextAlignment="Center"
+                                               Margin="0,0,0,4"/>
+
+                                    <!-- Estado -->
+                                    <TextBlock Text="{Binding Estado}"
+                                               FontSize="11"
+                                               FontWeight="Bold"
+                                               Foreground="#2D2D2D"
+                                               TextAlignment="Center"/>
+
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+
+        </GroupBox>
+
+        <!-- Gestión de Mesa -->
+        <GroupBox Header="Gestión de Mesa"
+                  Grid.Column="1"
+                  FontFamily="/Fonts/#Poppins"
+                  FontWeight="Bold">
+            <StackPanel Margin="10" VerticalAlignment="Top">
+                <Label Content="Número:" Foreground="{StaticResource TextColor}" FontWeight="Regular"/>
+                <TextBox Text="{Binding Numero, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,8"/>
+
+                <Label Content="Capacidad:" Foreground="{StaticResource TextColor}" FontWeight="Regular"/>
+                <TextBox Text="{Binding Capacidad, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,8"/>
+
+                <Button Content="Guardar" Command="{Binding GuardarCommand}" Margin="0,0,0,5" Padding="6"/>
+                <Button Content="Eliminar" Command="{Binding EliminarCommand}" Margin="0,0,0,5" Padding="6"/>
+                <Button Content="Nuevo" Command="{Binding NuevoCommand}" Margin="0,0,0,10" Padding="6"/>
+
+                <TextBlock Text="{Binding Mensaje}" 
+                           Foreground="{StaticResource TextColor}" 
+                           TextWrapping="Wrap"/>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+
+</UserControl>

@@ -1,0 +1,9 @@
+1|2|12|Libre
+2|12|1|Libre
+3|323|21|Libre
+4|4|2|Libre
+5|56|3|Libre
+6|1|234|Libre
+7|112|2|Libre
+8|121|2|Libre
+9|6|5|Libre

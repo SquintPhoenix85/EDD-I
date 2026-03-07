@@ -1,0 +1,108 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+
+namespace RestaurantApp.Utilities
+{
+    public static class PlatoImageHelper
+    {
+        /// <summary>
+        /// Diccionario que asocia nombres de platos con sus imágenes
+        /// </summary>
+        private static readonly Dictionary<string, string> ImageMapping = new()
+        {
+            { "agua", "/Resources/Images/agua.jpg" },
+            { "chocolate", "/Resources/Images/chocolate.jpg" },
+            { "capuchino", "/Resources/Images/capuchino.png" },
+            { "espresso", "/Resources/Images/espresso.png" },
+            { "torta", "/Resources/Images/torta.png" }
+        };
+
+        /// <summary>
+        /// Obtiene automáticamente la imagen basada en el nombre del plato
+        /// </summary>
+        public static string GetImagePathByName(string platoNombre)
+        {
+            if (string.IsNullOrWhiteSpace(platoNombre))
+                return GetDefaultImage();
+
+            var nombreLower = platoNombre.ToLower().Trim();
+
+            // Buscar coincidencia exacta
+            if (ImageMapping.TryGetValue(nombreLower, out var imagePath))
+                return imagePath;
+
+            // Buscar coincidencia parcial (si el nombre contiene parte del mapping)
+            foreach (var kvp in ImageMapping)
+            {
+                if (nombreLower.Contains(kvp.Key) || kvp.Key.Contains(nombreLower))
+                    return kvp.Value;
+            }
+
+            return GetDefaultImage();
+        }
+
+        /// <summary>
+        /// Obtiene la imagen por defecto
+        /// </summary>
+        public static string GetDefaultImage()
+        {
+            return "https://via.placeholder.com/156x100/D4A373/FFFFFF?text=Sin+Imagen";
+        }
+
+        /// <summary>
+        /// Obtiene la ruta de imagen para un plato. Si el plato no tiene imagen, retorna la imagen por defecto.
+        /// </summary>
+        public static string GetImagePath(string? imagePath)
+        {
+            if (!string.IsNullOrEmpty(imagePath))
+                return imagePath;
+
+            return GetDefaultImage();
+        }
+
+        /// <summary>
+        /// Verifica si una imagen existe en el proyecto.
+        /// </summary>
+        public static bool ImageExists(string? imagePath)
+        {
+            if (string.IsNullOrEmpty(imagePath))
+                return false;
+
+            // Convertir ruta de recurso a ruta del sistema de archivos
+            var localPath = imagePath.Replace("pack://application:,,,/", "");
+            return File.Exists(localPath);
+        }
+
+        /// <summary>
+        /// Obtiene una lista de rutas de imagen disponibles.
+        /// </summary>
+        public static List<string> GetAvailableImages()
+        {
+            var imageDir = "Resources/Images";
+            var images = new List<string>();
+
+            if (Directory.Exists(imageDir))
+            {
+                var files = Directory.GetFiles(imageDir, "*.png")
+                    .Concat(Directory.GetFiles(imageDir, "*.jpg"))
+                    .Concat(Directory.GetFiles(imageDir, "*.jpeg"));
+
+                foreach (var file in files)
+                {
+                    var fileName = Path.GetFileName(file);
+                    images.Add($"/Resources/Images/{fileName}");
+                }
+            }
+
+            return images;
+        }
+    }
+}
+
+
+            return images;
+        }
+    }
+}
