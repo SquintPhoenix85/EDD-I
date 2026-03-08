@@ -42,13 +42,7 @@
             </ItemsControl.ItemContainerStyle>
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <Grid Width="60" Height="40">
-                        <Grid.InputBindings>
-                            <MouseBinding MouseAction="LeftClick" 
-                              Command="{Binding DataContext.SelectCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
-                              CommandParameter="{Binding}" />
-                        </Grid.InputBindings>
-
+                    <Grid Width="60" Height="40" MouseLeftButtonDown="Mesa_MouseDown" MouseMove="Mesa_MouseMove" MouseLeftButtonUp="Mesa_MouseUp">
                         <Rectangle Fill="{Binding Estado, Converter={StaticResource EstadoToBrushConverter}}"
                                    Stroke="Black" RadiusX="4" RadiusY="4"/>
                         <Viewbox Stretch="Uniform" Margin="4">
