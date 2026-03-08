@@ -55,7 +55,7 @@
             <WrapPanel Margin="5">
                 <Label Content="Plato:" VerticalAlignment="Center"/>
                 <ComboBox ItemsSource="{Binding Platos}" SelectedItem="{Binding SelectedPlato}"
-                          DisplayMemberPath="Nombre" Width="105" Margin="5,0"/>
+                          DisplayMemberPath="Nombre" Width="105" Margin="5,0" SelectionChanged="ComboBox_SelectionChanged"/>
                 <Label Content="Cantidad:" VerticalAlignment="Center"/>
                 <TextBox Text="{Binding Cantidad, UpdateSourceTrigger=PropertyChanged}" Width="80" Margin="5,0"/>
                 <Button Content="Agregar Plato" Command="{Binding AgregarDetalleCommand}" Margin="5,0" Padding="8,3"/>

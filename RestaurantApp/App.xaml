@@ -2,12 +2,331 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:RestaurantApp"
-             StartupUri="MainWindow.xaml">
+             StartupUri="MainWindow.xaml"
+             ThemeMode="Light">
+
     <Application.Resources>
+
         <ResourceDictionary>
+
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/PresentationFramework.Fluent;component/Themes/Fluent.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/PresentationFramework.Fluent;component/Themes/Fluent.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+
+            <!-- PALETA GLOBAL -->
+
+            <SolidColorBrush x:Key="PrimaryColor" Color="#6F4E37"/>
+            <SolidColorBrush x:Key="AccentColor" Color="#D4A373"/>
+            <SolidColorBrush x:Key="BackgroundColor" Color="#FFFFFF"/>
+            <SolidColorBrush x:Key="PanelColor" Color="#FFFFFF"/>
+            <SolidColorBrush x:Key="TextColor" Color="#2D2D2D"/>
+            
+            <!-- ACRYLIC LIKE TEXTURE BRUSHES-->
+
+            <SolidColorBrush x:Key="AcrylicLightBrush" Color="#DDFFFFFF" Opacity="0.7"/>
+            <SolidColorBrush x:Key="AcrylicDarkBrush" Color="#AA6F4E37" Opacity="0.8"/>
+            
+            <!-- GRADIENT FADES -->
+
+            <LinearGradientBrush x:Key="FadeTopToBottom" StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#F5F1EC" Offset="0"/>
+                <GradientStop Color="#00F5F1EC" Offset="1"/>
+            </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="FadeLeftToRight" StartPoint="0,0" EndPoint="1,0">
+                <GradientStop Color="#6F4E37" Offset="0"/>
+                <GradientStop Color="#D4A373" Offset="1"/>
+            </LinearGradientBrush>
+
+            <RadialGradientBrush x:Key="RadialFade">
+                <GradientStop Color="#FFFFFF" Offset="0"/>
+                <GradientStop Color="#F5F1EC" Offset="0.7"/>
+                <GradientStop Color="#D4A373" Offset="1"/>
+            </RadialGradientBrush>
+
+            <!-- ACRYLIC PANEL STYLE -->
+
+            <Style x:Key="AcrylicPanel" TargetType="Border">
+                <Setter Property="Background" Value="{StaticResource AcrylicBrush}"/>
+                <Setter Property="BorderBrush" Value="#22000000"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="CornerRadius" Value="8"/>
+                <Setter Property="Padding" Value="16"/>
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <BlurEffect Radius="20"/>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!-- ESTILO GLOBAL DE BOTONES -->
+
+            <Style TargetType="Button">
+                <Setter Property="Background" Value="{StaticResource AccentColor}"/>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="Padding" Value="12,6"/>
+                <Setter Property="Margin" Value="0,0,0,5"/>
+                <Setter Property="FontWeight" Value="SemiBold"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="8"
+                        Padding="{TemplateBinding Padding}">
+                                <ContentPresenter HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="{StaticResource PrimaryColor}"/>
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter Property="Background" Value="#5A3E2A"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+           
+            <!-- ESTILO DE GROUPBOX CON ESQUINAS REDONDEADAS -->
+
+            <Style TargetType="GroupBox">
+                <Setter Property="Foreground" Value="{StaticResource TextColor}"/>
+                <Setter Property="Padding" Value="12"/>
+                <Setter Property="Margin" Value="4"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="GroupBox">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Border Grid.Row="0" Grid.RowSpan="2"
+                            Background="{StaticResource PanelColor}"
+                            BorderBrush="{StaticResource AccentColor}"
+                            BorderThickness="1"
+                            CornerRadius="10">
+                                    <Border.Effect>
+                                        <DropShadowEffect BlurRadius="8" ShadowDepth="2" Opacity="0.2"/>
+                                    </Border.Effect>
+                                </Border>
+                                <Border Grid.Row="0" 
+                            Background="{StaticResource AccentColor}"
+                            CornerRadius="10,10,0,0"
+                            Padding="8,4">
+                                    <ContentPresenter ContentSource="Header"
+                                        TextElement.Foreground="White"
+                                        TextElement.FontWeight="SemiBold"/>
+                                </Border>
+                                <ContentPresenter Grid.Row="1" Margin="{TemplateBinding Padding}"/>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!-- ESTILO DE TEXTBOX CON ESQUINAS REDONDEADAS -->
+
+            <Style TargetType="TextBox">
+                <Setter Property="Padding" Value="8,6"/>
+                <Setter Property="BorderBrush" Value="{StaticResource AccentColor}"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="Foreground" Value="{StaticResource TextColor}"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="TextBox">
+                            <Border Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="6">
+                                <ScrollViewer x:Name="PART_ContentHost" 
+                                Margin="{TemplateBinding Padding}"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!-- ESTILO DE COMBOBOX CON ESQUINAS REDONDEADAS -->
+
+            <Style TargetType="ComboBox">
+                <Setter Property="Padding" Value="18,12"/>
+                <Setter Property="BorderBrush" Value="{StaticResource AccentColor}"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="ComboBox">
+                            <Grid>
+                                <ToggleButton x:Name="ToggleButton"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                IsChecked="{Binding Path=IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+                                ClickMode="Press">
+                                    <ToggleButton.Template>
+                                        <ControlTemplate TargetType="ToggleButton">
+                                            <Border Background="{TemplateBinding Background}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        CornerRadius="6">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition/>
+                                                        <ColumnDefinition Width="20"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <ContentPresenter Grid.Column="0" Margin="18,12"/>
+                                                    <Path Grid.Column="1" 
+                                              Data="M 0 0 L 4 4 L 8 0 Z"
+                                              Fill="{StaticResource AccentColor}"
+                                              HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                                                </Grid>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </ToggleButton.Template>
+                                </ToggleButton>
+                                <ContentPresenter x:Name="ContentSite"
+                                    IsHitTestVisible="False"
+                                    Content="{TemplateBinding SelectionBoxItem}"
+                                    ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                                    Margin="18,12"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Left"/>
+                                <Popup x:Name="Popup"
+                           Placement="Bottom"
+                           IsOpen="{TemplateBinding IsDropDownOpen}"
+                           AllowsTransparency="True"
+                           Focusable="False"
+                           PopupAnimation="Slide">
+                                    <Border Background="White"
+                                BorderBrush="{StaticResource AccentColor}"
+                                BorderThickness="1"
+                                CornerRadius="6"
+                                MaxHeight="200">
+                                        <ScrollViewer>
+                                            <StackPanel IsItemsHost="True"/>
+                                        </ScrollViewer>
+                                    </Border>
+                                </Popup>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!-- ESTILO DE BORDER (PANELES) CON ESQUINAS REDONDEADAS -->
+
+            <Style x:Key="RoundedPanel" TargetType="Border">
+                <Setter Property="Background" Value="{StaticResource PanelColor}"/>
+                <Setter Property="BorderBrush" Value="{StaticResource AccentColor}"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="CornerRadius" Value="12"/>
+                <Setter Property="Padding" Value="16"/>
+                <Setter Property="Margin" Value="4"/>
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect BlurRadius="10" ShadowDepth="3" Opacity="0.2"/>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!-- ESTILO DE DATAGRID CON ESQUINAS REDONDEADAS -->
+
+            <Style TargetType="DataGrid">
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="BorderBrush" Value="{StaticResource AccentColor}"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="RowBackground" Value="White"/>
+                <Setter Property="AlternatingRowBackground" Value="#F9F9F9"/>
+                <Setter Property="GridLinesVisibility" Value="None"/>
+                <Setter Property="HeadersVisibility" Value="Column"/>
+                <Setter Property="AutoGenerateColumns" Value="False"/>
+                <Setter Property="CanUserAddRows" Value="False"/>
+                <Setter Property="CanUserDeleteRows" Value="False"/>
+                <Setter Property="SelectionMode" Value="Single"/>
+            </Style>
+
+            <Style TargetType="DataGridColumnHeader">
+                <Setter Property="Background" Value="{StaticResource AccentColor}"/>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="FontWeight" Value="SemiBold"/>
+                <Setter Property="Padding" Value="12,8"/>
+                <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                <Setter Property="BorderBrush" Value="{StaticResource PrimaryColor}"/>
+                <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                <Setter Property="Height" Value="40"/>
+            </Style>
+
+            <Style TargetType="DataGridRow">
+                <Setter Property="Background" Value="White"/>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="#F5F1EC"/>
+                    </Trigger>
+                    <Trigger Property="IsSelected" Value="True">
+                        <Setter Property="Background" Value="{StaticResource AccentColor}"/>
+                        <Setter Property="Foreground" Value="White"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style TargetType="DataGridCell">
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Padding" Value="12,6"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
+
+            <!-- ESTILO DE TABCONTROL CON ESQUINAS REDONDEADAS -->
+
+            <Style TargetType="TabControl">
+                <Setter Property="Background" Value="{StaticResource BackgroundColor}"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Padding" Value="8"/>
+            </Style>
+
+            <Style TargetType="TabItem">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="TabItem">
+                            <Border x:Name="Border"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        CornerRadius="8,8,0,0"
+                        Margin="2,0"
+                        Padding="16,8">
+                                <ContentPresenter x:Name="ContentSite"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    ContentSource="Header"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter TargetName="Border" Property="Background" Value="{StaticResource AccentColor}"/>
+                                    <Setter Property="Foreground" Value="White"/>
+                                </Trigger>
+                                <Trigger Property="IsSelected" Value="False">
+                                    <Setter TargetName="Border" Property="Background" Value="#E0E0E0"/>
+                                    <Setter Property="Foreground" Value="{StaticResource TextColor}"/>
+                                </Trigger>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="Border" Property="Background" Value="{StaticResource PrimaryColor}"/>
+                                    <Setter Property="Foreground" Value="White"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
         </ResourceDictionary>
+
     </Application.Resources>
 </Application>

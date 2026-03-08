@@ -7,4 +7,9 @@ namespace RestaurantApp;
 /// </summary>
 public partial class App : Application
 {
+    public App()
+    {
+        InitializeComponent();
+        Application.Current.ThemeMode = ThemeMode.Light;
+    }
 }

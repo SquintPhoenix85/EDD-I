@@ -1,22 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Lenovo\\Documents\\DATOS\\EDD-I\\RestaurantApp\\",
+  "WorkspaceRootPath": "C:\\Users\\Lenovo\\Desktop\\New folder\\RestaurantApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\documents\\datos\\edd-i\\restaurantapp\\views\\mesasview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:views\\mesasview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\documents\\datos\\edd-i\\restaurantapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\documents\\datos\\edd-i\\restaurantapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\desktop\\new folder\\restaurantapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\documents\\datos\\edd-i\\restaurantapp\\restaurantapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\desktop\\new folder\\restaurantapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\desktop\\new folder\\restaurantapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\desktop\\new folder\\restaurantapp\\restaurantapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:restaurantapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\desktop\\new folder\\restaurantapp\\viewmodels\\pedidosviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:viewmodels\\pedidosviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\desktop\\new folder\\restaurantapp\\views\\pedidosview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:views\\pedidosview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\desktop\\new folder\\restaurantapp\\views\\pedidosview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:views\\pedidosview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\desktop\\new folder\\restaurantapp\\models\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:models\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\desktop\\new folder\\restaurantapp\\viewmodels\\mesasviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:viewmodels\\mesasviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|c:\\users\\lenovo\\desktop\\new folder\\restaurantapp\\models\\mesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45D02D56-29FD-F639-E9FD-6C576CE190A6}|RestaurantApp.csproj|solutionrelative:models\\mesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,15 +50,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\DATOS\\EDD-I\\RestaurantApp\\App.xaml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\New folder\\RestaurantApp\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "C:\\Users\\Lenovo\\Documents\\DATOS\\EDD-I\\RestaurantApp\\App.xaml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\New folder\\RestaurantApp\\App.xaml",
               "RelativeToolTip": "App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-03-03T19:33:18.857Z",
@@ -44,44 +68,116 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "RestaurantApp",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\DATOS\\EDD-I\\RestaurantApp\\RestaurantApp.csproj",
+              "Title": "RestaurantApp.csproj",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\New folder\\RestaurantApp\\RestaurantApp.csproj",
               "RelativeDocumentMoniker": "RestaurantApp.csproj",
-              "ToolTip": "C:\\Users\\Lenovo\\Documents\\DATOS\\EDD-I\\RestaurantApp\\RestaurantApp.csproj",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\New folder\\RestaurantApp\\RestaurantApp.csproj",
               "RelativeToolTip": "RestaurantApp.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2026-03-04T01:23:35.11Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MesasView.xaml",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\DATOS\\EDD-I\\RestaurantApp\\Views\\MesasView.xaml",
-              "RelativeDocumentMoniker": "Views\\MesasView.xaml",
-              "ToolTip": "C:\\Users\\Lenovo\\Documents\\DATOS\\EDD-I\\RestaurantApp\\Views\\MesasView.xaml",
-              "RelativeToolTip": "Views\\MesasView.xaml",
+              "DocumentIndex": 4,
+              "Title": "PedidosViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\New folder\\RestaurantApp\\ViewModels\\PedidosViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\PedidosViewModel.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\New folder\\RestaurantApp\\ViewModels\\PedidosViewModel.cs",
+              "RelativeToolTip": "ViewModels\\PedidosViewModel.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAYwBUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-08T01:20:50.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Pedido.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\New folder\\RestaurantApp\\Models\\Pedido.cs",
+              "RelativeDocumentMoniker": "Models\\Pedido.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\New folder\\RestaurantApp\\Models\\Pedido.cs",
+              "RelativeToolTip": "Models\\Pedido.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-08T01:20:13.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PedidosView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\New folder\\RestaurantApp\\Views\\PedidosView.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\PedidosView.xaml.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\New folder\\RestaurantApp\\Views\\PedidosView.xaml.cs",
+              "RelativeToolTip": "Views\\PedidosView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-08T01:04:17.087Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MesasViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\New folder\\RestaurantApp\\ViewModels\\MesasViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\MesasViewModel.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\New folder\\RestaurantApp\\ViewModels\\MesasViewModel.cs",
+              "RelativeToolTip": "ViewModels\\MesasViewModel.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-08T00:40:07.916Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Mesa.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\New folder\\RestaurantApp\\Models\\Mesa.cs",
+              "RelativeDocumentMoniker": "Models\\Mesa.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\New folder\\RestaurantApp\\Models\\Mesa.cs",
+              "RelativeToolTip": "Models\\Mesa.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-08T00:39:44.057Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PedidosView.xaml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\New folder\\RestaurantApp\\Views\\PedidosView.xaml",
+              "RelativeDocumentMoniker": "Views\\PedidosView.xaml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\New folder\\RestaurantApp\\Views\\PedidosView.xaml",
+              "RelativeToolTip": "Views\\PedidosView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-04T01:38:37.792Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-08T00:16:37.341Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\New folder\\RestaurantApp\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\New folder\\RestaurantApp\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-07T23:39:46.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\DATOS\\EDD-I\\RestaurantApp\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\New folder\\RestaurantApp\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Lenovo\\Documents\\DATOS\\EDD-I\\RestaurantApp\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\New folder\\RestaurantApp\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-03-04T01:33:17.221Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }
