@@ -1,8 +1,9 @@
-using System;
-using System.Collections.ObjectModel;
-using System.Windows.Input;
 using RestaurantApp.Models;
 using RestaurantApp.Services;
+using System;
+using System.Collections.ObjectModel;
+using System.Reflection.Metadata;
+using System.Windows.Input;
 
 namespace RestaurantApp.ViewModels
 {
@@ -40,6 +41,7 @@ namespace RestaurantApp.ViewModels
         public ICommand GuardarCommand { get; }
         public ICommand EliminarCommand { get; }
         public ICommand NuevoCommand { get; }
+        public ICommand SelectCommand { get; }
 
         public MesasViewModel(MesaService? service = null)
         {
@@ -47,6 +49,7 @@ namespace RestaurantApp.ViewModels
             GuardarCommand = new RelayCommand(Guardar);
             EliminarCommand = new RelayCommand(Eliminar);
             NuevoCommand = new RelayCommand(Nuevo);
+            SelectCommand = new RelayCommand(Select);
             CargarMesas();
         }
 
@@ -59,6 +62,20 @@ namespace RestaurantApp.ViewModels
         public void RefreshData()
         {
             this.CargarMesas();
+        }
+
+        private void Select(object? _)
+        {
+            if (_ is Mesa mesa)
+            {
+                SelectedMesa = mesa;
+            }
+            else if (SelectedMesa != null)
+            {
+                Numero = SelectedMesa.Numero.ToString();
+                Capacidad = SelectedMesa.Capacidad.ToString();
+                EditMode = true;
+            }
         }
 
         private void Guardar(object? _)

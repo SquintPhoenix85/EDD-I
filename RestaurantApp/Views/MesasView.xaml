@@ -1,13 +1,22 @@
 <UserControl x:Class="RestaurantApp.Views.MesasView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:conv="clr-namespace:RestaurantApp.Converters">
+    <UserControl.Resources>
+        <conv:EstadoToBrushConverter x:Key="EstadoToBrushConverter"/>
+    </UserControl.Resources>
+
     <Grid Margin="10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="300"/>
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
 
-        <GroupBox Header="Lista de Mesas" Grid.Column="0" Margin="0,0,5,0">
+        <GroupBox Header="Lista de Mesas" Grid.Column="0" Grid.Row="0" Margin="0,0,5,0">
             <DataGrid ItemsSource="{Binding Mesas}" SelectedItem="{Binding SelectedMesa}"
                       AutoGenerateColumns="False" IsReadOnly="True">
                 <DataGrid.Columns>
@@ -19,7 +28,44 @@
             </DataGrid>
         </GroupBox>
 
-        <GroupBox Header="Gestión de Mesa" Grid.Column="1">
+        <ItemsControl ItemsSource="{Binding Mesas}" Grid.Column="0" Grid.Row="1" Margin="0,10,5,0" Height="250" ClipToBounds="True">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Canvas x:Name="MesaCanvas" Background="Transparent"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemContainerStyle>
+                <Style TargetType="ContentPresenter">
+                    <Setter Property="Canvas.Left" Value="{Binding X}"/>
+                    <Setter Property="Canvas.Top" Value="{Binding Y}"/>
+                </Style>
+            </ItemsControl.ItemContainerStyle>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Grid Width="60" Height="40">
+                        <Grid.InputBindings>
+                            <MouseBinding MouseAction="LeftClick" 
+                              Command="{Binding DataContext.SelectCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                              CommandParameter="{Binding}" />
+                        </Grid.InputBindings>
+
+                        <Rectangle Fill="{Binding Estado, Converter={StaticResource EstadoToBrushConverter}}"
+                                   Stroke="Black" RadiusX="4" RadiusY="4"/>
+                        <Viewbox Stretch="Uniform" Margin="4">
+                            <TextBlock Text="{Binding Numero}"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       TextAlignment="Center"
+                                       Foreground="White"
+                                       FontWeight="Bold"
+                                       IsHitTestVisible="False"/>
+                        </Viewbox>
+                    </Grid>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+        <GroupBox Header="Gestión de Mesa" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2">
             <StackPanel Margin="10" VerticalAlignment="Top">
                 <Label Content="Número:"/>
                 <TextBox Text="{Binding Numero, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,8"/>
