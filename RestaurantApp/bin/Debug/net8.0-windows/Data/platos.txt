@@ -1,2 +1,0 @@
-2|Helado|4|True
-1|Cafe|10|True

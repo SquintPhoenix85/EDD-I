@@ -1,5 +1,0 @@
-3|29|5|Libre
-1|12|10|Ocupada
-4|16|12|Libre
-5|26|5|Libre
-2|69|69|Libre
