@@ -68,7 +68,7 @@
                 <Button Content="Guardar" Command="{Binding GuardarCommand}" Margin="0,0,0,5" Padding="5"/>
                 <Button Content="Eliminar" Command="{Binding EliminarCommand}" Margin="0,0,0,5" Padding="5"/>
                 <Button Content="Nuevo" Command="{Binding NuevoCommand}" Margin="0,0,0,10" Padding="5"/>
-                <TextBlock Text="{Binding Mensaje}" Foreground="DarkGreen" TextWrapping="Wrap"/>
+                <TextBlock Text="{Binding Mensaje}" Foreground="DarkGray" TextWrapping="Wrap"/>
             </StackPanel>
         </GroupBox>
     </Grid>

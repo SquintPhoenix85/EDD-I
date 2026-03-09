@@ -2,6 +2,7 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:RestaurantApp"
+             xmlns:utilities="clr-namespace:RestaurantApp.Utilities"
              StartupUri="MainWindow.xaml"
              ThemeMode="Light">
 
@@ -13,10 +14,26 @@
                 <ResourceDictionary Source="pack://application:,,,/PresentationFramework.Fluent;component/Themes/Fluent.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
-            <!-- PALETA GLOBAL -->
+            <!-- CONVERTERS -->
+            <utilities:PlatoImageConverter x:Key="PlatoImageConverter"/>
+            <utilities:DisponibilidadColorConverter x:Key="DisponibilidadColorConverter"/>
+            <utilities:DisponibilidadTextConverter x:Key="DisponibilidadTextConverter"/>
 
-            <SolidColorBrush x:Key="PrimaryColor" Color="#6F4E37"/>
-            <SolidColorBrush x:Key="AccentColor" Color="#D4A373"/>
+            <!-- POPPINS FONT FAMILIES -->
+            <FontFamily x:Key="PoppinsRegular">pack://application:,,,/Fonts/#Poppins Regular</FontFamily>
+            <FontFamily x:Key="PopinsSemiBold">pack://application:,,,/Fonts/#Poppins SemiBold</FontFamily>
+            <FontFamily x:Key="PoppinsFont">pack://application:,,,/Fonts/#Poppins Regular</FontFamily>
+
+            <!-- PALETA GLOBAL -->
+            <LinearGradientBrush x:Key="PrimaryColor" StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#6F4E37" Offset="0"/>
+                <GradientStop Color="#CC6F4E37" Offset="1"/>
+            </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="AccentColor" StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#FFD4A373" Offset="0"/>
+                <GradientStop Color="#CCD4A373" Offset="1"/>
+            </LinearGradientBrush>
             <SolidColorBrush x:Key="BackgroundColor" Color="#FFFFFF"/>
             <SolidColorBrush x:Key="PanelColor" Color="#FFFFFF"/>
             <SolidColorBrush x:Key="TextColor" Color="#2D2D2D"/>
@@ -47,7 +64,7 @@
             <!-- ACRYLIC PANEL STYLE -->
 
             <Style x:Key="AcrylicPanel" TargetType="Border">
-                <Setter Property="Background" Value="{StaticResource AcrylicBrush}"/>
+                <Setter Property="Background" Value="{StaticResource AcrylicLightBrush}"/>
                 <Setter Property="BorderBrush" Value="#22000000"/>
                 <Setter Property="BorderThickness" Value="1"/>
                 <Setter Property="CornerRadius" Value="8"/>
@@ -66,7 +83,9 @@
                 <Setter Property="Foreground" Value="White"/>
                 <Setter Property="Padding" Value="12,6"/>
                 <Setter Property="Margin" Value="0,0,0,5"/>
-                <Setter Property="FontWeight" Value="SemiBold"/>
+                <Setter Property="FontFamily" Value="{StaticResource PopinsSemiBold}"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="FontWeight" Value="Normal"/>
                 <Setter Property="BorderThickness" Value="0"/>
                 <Setter Property="Cursor" Value="Hand"/>
                 <Setter Property="Template">
@@ -97,6 +116,9 @@
 
             <Style TargetType="GroupBox">
                 <Setter Property="Foreground" Value="{StaticResource TextColor}"/>
+                <Setter Property="FontFamily" Value="{StaticResource PopinsSemiBold}"/>
+                <Setter Property="FontSize" Value="13"/>
+                <Setter Property="FontWeight" Value="Normal"/>
                 <Setter Property="Padding" Value="12"/>
                 <Setter Property="Margin" Value="4"/>
                 <Setter Property="Template">
@@ -138,6 +160,8 @@
                 <Setter Property="BorderBrush" Value="{StaticResource AccentColor}"/>
                 <Setter Property="BorderThickness" Value="1"/>
                 <Setter Property="Foreground" Value="{StaticResource TextColor}"/>
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsRegular}"/>
+                <Setter Property="FontSize" Value="13"/>
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="TextBox">
@@ -160,6 +184,8 @@
                 <Setter Property="BorderBrush" Value="{StaticResource AccentColor}"/>
                 <Setter Property="BorderThickness" Value="1"/>
                 <Setter Property="Background" Value="White"/>
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsRegular}"/>
+                <Setter Property="FontSize" Value="13"/>
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="ComboBox">
@@ -251,15 +277,18 @@
                 <Setter Property="CanUserAddRows" Value="False"/>
                 <Setter Property="CanUserDeleteRows" Value="False"/>
                 <Setter Property="SelectionMode" Value="Single"/>
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsRegular}"/>
+                <Setter Property="FontSize" Value="12"/>
             </Style>
 
             <Style TargetType="DataGridColumnHeader">
                 <Setter Property="Background" Value="{StaticResource AccentColor}"/>
                 <Setter Property="Foreground" Value="White"/>
-                <Setter Property="FontWeight" Value="SemiBold"/>
+                <Setter Property="FontFamily" Value="{StaticResource PopinsSemiBold}"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="FontWeight" Value="Normal"/>
                 <Setter Property="Padding" Value="12,8"/>
                 <Setter Property="BorderThickness" Value="0,0,1,1"/>
-                <Setter Property="BorderBrush" Value="{StaticResource PrimaryColor}"/>
                 <Setter Property="HorizontalContentAlignment" Value="Left"/>
                 <Setter Property="VerticalContentAlignment" Value="Center"/>
                 <Setter Property="Height" Value="40"/>
@@ -293,6 +322,9 @@
             </Style>
 
             <Style TargetType="TabItem">
+                <Setter Property="FontFamily" Value="{StaticResource PopinsSemiBold}"/>
+                <Setter Property="FontSize" Value="13"/>
+                <Setter Property="FontWeight" Value="Normal"/>
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="TabItem">
@@ -321,6 +353,91 @@
                                     <Setter Property="Foreground" Value="White"/>
                                 </Trigger>
                             </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!-- ESTILO DE TARJETA DE PLATO (POS) -->
+
+            <Style x:Key="PlatoCardStyle" TargetType="Border">
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="BorderBrush" Value="{StaticResource AccentColor}"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="CornerRadius" Value="12"/>
+                <Setter Property="Padding" Value="12"/>
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect BlurRadius="8" ShadowDepth="2" Opacity="0.15"/>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!-- ESTILO DE COMBOBOX PARA PLATOS (MÁS GRANDE) -->
+            <Style x:Key="PlatoComboBoxStyle" TargetType="ComboBox">
+                <Setter Property="Padding" Value="12,8"/>
+                <Setter Property="BorderBrush" Value="{StaticResource AccentColor}"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsRegular}"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="Height" Value="40"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="ComboBox">
+                            <Grid>
+                                <ToggleButton x:Name="ToggleButton"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                IsChecked="{Binding Path=IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+                                ClickMode="Press">
+                                    <ToggleButton.Template>
+                                        <ControlTemplate TargetType="ToggleButton">
+                                            <Border Background="{TemplateBinding Background}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        CornerRadius="6">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition/>
+                                                        <ColumnDefinition Width="30"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <ContentPresenter Grid.Column="0" Margin="12,8"/>
+                                                    <Path Grid.Column="1" 
+                                              Data="M 0 0 L 4 4 L 8 0 Z"
+                                              Fill="{StaticResource AccentColor}"
+                                              HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                                                </Grid>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </ToggleButton.Template>
+                                </ToggleButton>
+                                <ContentPresenter x:Name="ContentSite"
+                                    IsHitTestVisible="False"
+                                    ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                                    Content="{TemplateBinding SelectionBoxItem}"
+                                    Margin="12,8"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Left"/>
+                                <Popup x:Name="Popup"
+                           Placement="Bottom"
+                           IsOpen="{TemplateBinding IsDropDownOpen}"
+                           AllowsTransparency="True"
+                           Focusable="False"
+                           PopupAnimation="Slide">
+                                    <Border Background="White"
+                                BorderBrush="{StaticResource AccentColor}"
+                                BorderThickness="1"
+                                CornerRadius="6"
+                                MaxHeight="300">
+                                        <ScrollViewer>
+                                            <StackPanel IsItemsHost="True"/>
+                                        </ScrollViewer>
+                                    </Border>
+                                </Popup>
+                            </Grid>
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>

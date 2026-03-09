@@ -4,35 +4,157 @@
     <Grid Margin="10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="320"/>
         </Grid.ColumnDefinitions>
-        
-        <!-- Lista de platos -->
-        <GroupBox Header="Lista de Platos" Grid.RowSpan="3"  Grid.Column="0" Margin="0,0,5,0">
-            <DataGrid ItemsSource="{Binding Platos}" SelectedItem="{Binding SelectedPlato}"
-                      AutoGenerateColumns="False" IsReadOnly="True">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
-                    <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="*"/>
-                    <DataGridTextColumn Header="Precio" Binding="{Binding Precio, StringFormat=C}" Width="100"/>
-                    <DataGridTextColumn Header="Disponible" Binding="{Binding Disponible}" Width="80"/>
-                </DataGrid.Columns>
-            </DataGrid>
+
+        <!-- Lista de platos en vista POS -->
+        <GroupBox Header="Lista de Platos" Grid.Column="0" Margin="0,0,5,0">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <ItemsControl ItemsSource="{Binding Platos}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Style="{StaticResource PlatoCardStyle}" 
+                                    Margin="8" Width="200" Height="280"
+                                    Cursor="Hand">
+                                <!-- MouseBinding para seleccionar plato -->
+                                <Border.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" 
+                                                  Command="{Binding DataContext.SelectPlatoCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                                  CommandParameter="{Binding}"/>
+                                </Border.InputBindings>
+
+                                <Grid VerticalAlignment="Stretch">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="140"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <!-- Imagen del plato -->
+                                    <Border Grid.Row="0" CornerRadius="8" Background="#F5F1EC" 
+                                            BorderBrush="{StaticResource AccentColor}" BorderThickness="1"
+                                            Margin="0,0,0,8" Width="130" Height="130" HorizontalAlignment="Center">
+                                        <Image Source="{Binding Nombre, Converter={StaticResource PlatoImageConverter}}"
+                                               Stretch="UniformToFill"
+                                               StretchDirection="Both"/>
+                                    </Border>
+
+                                    <!-- ID del plato -->
+                                    <TextBlock Grid.Row="1" Text="{Binding Id, StringFormat='ID: {0}'}"
+                                               FontFamily="{StaticResource PoppinsRegular}"
+                                               FontSize="10"
+                                               Foreground="#999999"
+                                               Margin="0,0,0,4"/>
+
+                                    <!-- Nombre del plato -->
+                                    <TextBlock Grid.Row="2" Text="{Binding Nombre}"
+                                               FontFamily="{StaticResource PopinsSemiBold}"
+                                               FontSize="14"
+                                               Foreground="{StaticResource TextColor}"
+                                               TextTrimming="CharacterEllipsis"
+                                               TextWrapping="Wrap"
+                                               Margin="0,0,0,6"/>
+
+                                    <!-- Precio del plato -->
+                                    <TextBlock Grid.Row="3" Text="{Binding Precio, StringFormat=${0:F2}}"
+                                               FontFamily="{StaticResource PopinsSemiBold}"
+                                               FontSize="16"
+                                               Foreground="{StaticResource PrimaryColor}"
+                                               Margin="0,0,0,8"/>
+
+                      
+
+                                    <!-- Botón Disponible -->
+                                    <Button Grid.Row="4" VerticalAlignment="Stretch" 
+                                            Background="{Binding Disponible, Converter={StaticResource DisponibilidadColorConverter}}"
+                                            Content="{Binding Disponible, Converter={StaticResource DisponibilidadTextConverter}}"
+                                            Foreground="White"
+                                            FontFamily="{StaticResource PopinsSemiBold}"
+                                            FontSize="12"
+                                            Padding="8,6"
+                                            Margin="0,4,0,0"
+                                            Cursor="Hand"
+                                            BorderThickness="0">
+                                        <Button.Style>
+                                            <Style TargetType="Button">
+                                                <Setter Property="Foreground" Value="White"/>
+                                                <Setter Property="FontFamily" Value="{StaticResource PopinsSemiBold}"/>
+                                                <Setter Property="FontSize" Value="12"/>
+                                                <Setter Property="Padding" Value="8,6"/>
+                                                <Setter Property="Margin" Value="0,4,0,0"/>
+                                                <Setter Property="BorderThickness" Value="0"/>
+                                                <Setter Property="Cursor" Value="Hand"/>
+                                                <Setter Property="Template">
+                                                    <Setter.Value>
+                                                        <ControlTemplate TargetType="Button">
+                                                            <Border Background="{TemplateBinding Background}"
+                                                                    CornerRadius="6"
+                                                                    Padding="{TemplateBinding Padding}">
+                                                                <ContentPresenter HorizontalAlignment="Center"
+                                                                                  VerticalAlignment="Center"/>
+                                                            </Border>
+                                                        </ControlTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Style>
+                                        </Button.Style>
+                                    </Button>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel HorizontalAlignment="Left" Margin="8"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </ScrollViewer>
         </GroupBox>
 
-        <!-- Formulario -->
+        <!-- Panel de Gestión -->
         <GroupBox Header="Gestión de Plato" Grid.Column="1">
-            <StackPanel Margin="10" VerticalAlignment="Top">
-                <Label Content="Nombre:"/>
-                <TextBox Text="{Binding Nombre, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,8"/>
-                <Label Content="Precio:"/>
-                <TextBox Text="{Binding Precio, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,8"/>
-                <Button Content="Registrar" Command="{Binding GuardarCommand}" Margin="0,0,0,5" Padding="5" ToolTip="Use este botón para crear un nuevo plato, o modificar las propiedades de uno existente."/>
-                <Button Content="Eliminar" Command="{Binding EliminarCommand}" Margin="0,0,0,5" Padding="5" ToolTip="Seleccione una entrada en la tabla, y clickee aquí para eliminarla."/>
-                <Button Content="Cambiar Disponibilidad" Command="{Binding ToggleDisponibilidadCommand}" Margin="0,0,0,5" Padding="5" ToolTip="Registra la disponibilidad del plato en las entradas de facturación."/>
-                <Button Content="Limpiar" Command="{Binding NuevoCommand}" Margin="0,0,0,5" Padding="5" ToolTip="Use este botón para despejar los campos del formulario."/>
-                <TextBlock Text="{Binding Mensaje}" Foreground="LightBlue" TextWrapping="Wrap"/>
-            </StackPanel>
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel Margin="10">
+                    <Label Content="Nombre:" FontFamily="{StaticResource PoppinsRegular}" FontSize="12"/>
+                    <TextBox Text="{Binding Nombre, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,10"/>
+
+                    <Label Content="Precio:" FontFamily="{StaticResource PoppinsRegular}" FontSize="12"/>
+                    <TextBox Text="{Binding Precio, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,16"/>
+
+                    <Button Content="Registrar" 
+                            Command="{Binding GuardarCommand}" 
+                            Margin="0,0,0,8" 
+                            Padding="8,10"
+                            ToolTip="Use este botón para crear un nuevo plato, o modificar las propiedades de uno existente."/>
+
+                    <Button Content="Eliminar" 
+                            Command="{Binding EliminarCommand}" 
+                            Margin="0,0,0,8" 
+                            Padding="8,10"
+                            ToolTip="Seleccione una entrada en la tabla, y clickee aquí para eliminarla."/>
+
+                    <Button Content="Cambiar Disponibilidad" 
+                            Command="{Binding ToggleDisponibilidadCommand}" 
+                            Margin="0,0,0,8" 
+                            Padding="8,10"
+                            ToolTip="Registra la disponibilidad del plato en las entradas de facturación."/>
+
+                    <Button Content="Limpiar" 
+                            Command="{Binding NuevoCommand}" 
+                            Margin="0,0,0,16" 
+                            Padding="8,10"
+                            ToolTip="Use este botón para despejar los campos del formulario."/>
+
+                    <TextBlock Text="{Binding Mensaje}" 
+                               Foreground="DarkGray" 
+                               TextWrapping="Wrap"
+                               FontFamily="{StaticResource PoppinsRegular}"
+                               FontSize="11"/>
+                </StackPanel>
+            </ScrollViewer>
         </GroupBox>
     </Grid>
 </UserControl>

@@ -41,6 +41,7 @@ namespace RestaurantApp.ViewModels
         public ICommand EliminarCommand { get; }
         public ICommand NuevoCommand { get; }
         public ICommand ToggleDisponibilidadCommand { get; }
+        public ICommand SelectPlatoCommand { get; }
 
         public PlatosViewModel(PlatoService? service = null)
         {
@@ -49,6 +50,7 @@ namespace RestaurantApp.ViewModels
             EliminarCommand = new RelayCommand(Eliminar);
             NuevoCommand = new RelayCommand(Nuevo);
             ToggleDisponibilidadCommand = new RelayCommand(ToggleDisponibilidad);
+            SelectPlatoCommand = new RelayCommand(SelectPlato);
             CargarPlatos();
         }
 
@@ -106,9 +108,13 @@ namespace RestaurantApp.ViewModels
             if (SelectedPlato == null) { Mensaje = "Seleccione un plato."; return; }
             try
             {
-                _service.CambiarDisponibilidad(SelectedPlato.Id, !SelectedPlato.Disponible);
+                int platoId = SelectedPlato.Id;
+                _service.CambiarDisponibilidad(platoId, !SelectedPlato.Disponible);
                 Mensaje = "Disponibilidad actualizada.";
                 CargarPlatos();
+
+                // Actualizar el SelectedPlato con el objeto recargado
+                SelectedPlato = Platos.FirstOrDefault(p => p.Id == platoId);
             }
             catch (Exception ex) { Mensaje = $"Error: {ex.Message}"; }
         }
@@ -121,6 +127,14 @@ namespace RestaurantApp.ViewModels
             Precio = string.Empty;
             EditMode = false;
             Mensaje = string.Empty;
+        }
+
+        private void SelectPlato(object? parameter)
+        {
+            if (parameter is Plato plato)
+            {
+                SelectedPlato = plato;
+            }
         }
     }
 }
