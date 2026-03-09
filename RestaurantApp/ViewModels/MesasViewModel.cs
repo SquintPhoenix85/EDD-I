@@ -1,8 +1,7 @@
-using System;
-using System.Collections.ObjectModel;
-using System.Windows.Input;
 using RestaurantApp.Models;
 using RestaurantApp.Services;
+using System.Collections.ObjectModel;
+using System.Windows.Input;
 
 namespace RestaurantApp.ViewModels
 {
@@ -80,7 +79,6 @@ namespace RestaurantApp.ViewModels
                     _service.Agregar(num, cap);
                     Mensaje = "Mesa agregada.";
                 }
-                Nuevo(null);
                 CargarMesas();
             }
             catch (Exception ex) { Mensaje = $"Error: {ex.Message}"; }

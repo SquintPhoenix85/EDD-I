@@ -194,7 +194,7 @@
                                 </ToggleButton>
                                 <ContentPresenter x:Name="ContentSite"
                                     IsHitTestVisible="False"
-                                    Content="{TemplateBinding SelectionBoxItem}"
+                                    Content="{Binding SelectionBoxItem.Numero, RelativeSource={RelativeSource TemplatedParent}}"
                                     ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
                                     Margin="18,12"
                                     VerticalAlignment="Center"
