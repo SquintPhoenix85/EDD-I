@@ -72,6 +72,5 @@
                 <TextBlock Text="{Binding Mensaje}" Foreground="DarkGray" TextWrapping="Wrap"/>
             </StackPanel>
         </GroupBox>
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}"/>
     </Grid>
 </UserControl>
